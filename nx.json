@@ -1,10 +1,10 @@
 {
-  "npmScope": "web-and-native-shared-component",
+  "npmScope": "wansc",
   "affected": {
     "defaultBase": "main"
   },
   "cli": {
-    "defaultCollection": "@nrwl/workspace"
+    "defaultCollection": "@nrwl/react-native"
   },
   "implicitDependencies": {
     "package.json": {
@@ -17,12 +17,7 @@
     "default": {
       "runner": "@nrwl/workspace/tasks-runners/default",
       "options": {
-        "cacheableOperations": [
-          "build",
-          "lint",
-          "test",
-          "e2e"
-        ]
+        "cacheableOperations": ["build", "lint", "test", "e2e"]
       }
     }
   },
@@ -33,5 +28,22 @@
         "projects": "dependencies"
       }
     ]
+  },
+  "defaultProject": "app",
+  "generators": {
+    "@nrwl/react": {
+      "application": {
+        "style": "none",
+        "linter": "eslint",
+        "babel": true
+      },
+      "component": {
+        "style": "none"
+      },
+      "library": {
+        "style": "none",
+        "linter": "eslint"
+      }
+    }
   }
 }
